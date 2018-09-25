@@ -15,12 +15,16 @@ Hi, 這裡是IND，一個玩各種資訊技術的好地方。不管是AI、IoT�
 
 ## 聯絡我們
 
+![](img/qr_fbfan.png)
 [粉絲團](https://www.facebook.com/ind.ntou/)
 
+![](img/qr_fbgroup.png)
 [社團](https://www.facebook.com/groups/ind.ntou/)
 
+![](img/qr_telegram.png)
 [Telegram群組](https://t.me/joinchat/A0isxRDS_IZnfSabF-shug)
 
+![](img/qr_github.png)
 [GitHub](https://github.com/ntouind)
 
 ## 歷史資料
