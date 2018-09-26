@@ -1,0 +1,225 @@
+body {
+	font-size: 16px;
+	margin: 0px;
+	padding: 0px;
+	/*background-color: #F4F4FF;*/
+	line-height: 120%;
+}
+
+a:link, a:visited {
+	color: #5555FF;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #5555FF;
+	text-decoration: underline;
+}
+
+#container {
+	width: 920px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-color: white;
+}
+
+#header {
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+	width: 920px;
+	background-color: #ACACFF;
+	background: url(../images/bgheader.png);
+}
+
+#headinfo {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: right;
+	padding-top: 80px;
+	padding-right: 24px;
+	color: #CCCCCC;
+}
+
+#headinfo a:link, #headinfo a:visited {
+	color: #EAEAFF;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+#headinfo a:hover, #headinfo a:active {
+	color: #EAEAFF;
+	font-size: 14px;
+	text-decoration: underline;
+}
+
+#main {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	width: 920px;
+	background-image: url(../images/bgmain.png);
+	background-repeat: repeat-y;
+}
+
+#menu {
+	padding-left: 20px;
+	padding-bottom: 40px;
+	width: 148px;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+#menu .category {
+	background-color: #6B7FAC;
+	color: #F4F4FF;
+	padding-left: 5px;
+	border-top: 1px solid #9CA9C7;
+	border-left: 1px solid #9CA9C7;
+	border-right: 1px solid #475472;
+	border-bottom: 1px solid #475472;
+}
+
+#menu ul {
+	list-style: none;
+	line-height: 150%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#menu li {
+	background: #E8E8E8;
+	border-top: 1px solid #F3F3F3;
+	border-bottom: 1px solid #C5C5C5;
+}
+
+#menu li a:link, #menu li a:visited {
+	display: block;
+	color: #5D719C;
+	font-size: 14px;
+	text-decoration: none;
+	padding-left: 5px;
+	font-weight: bold;
+	border-left: 10px solid #D7D5D5;
+	border-right: 1px solid #D7D5D5;
+}
+
+#menu li a:hover, #menu li a:active {
+	color: #5D719C;
+	font-size: 14px;
+	text-decoration: none;
+	background-color: #D7D5D5;
+	padding-left: 5px;
+	font-weight: bold;
+	border-right: 1px solid #D5D5FF;
+}
+
+#content {
+	padding-right: 19px;
+	width: 720px;
+	float: right;
+}
+
+#content #ann {
+	margin-right: 20px;
+	font-size: 14px;
+}
+
+#content .icontent {
+	border-left: 1px solid #C6D9EC;
+	border-right: 1px solid #C6D9EC;
+	border-bottom: 1px solid #C6D9EC;
+	background-color: #FAFAFA;
+	padding: 5px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	/* 以下三行是利用!important修改樣式優先權來讓IE 6和其他瀏覽器看起來效果相同
+	 * 因為IE 6看不懂!important和min-height
+	 * 這裡IE 6只看懂height:120px;而非IE 6的瀏覽器會忽略height:120px;
+	*/
+	height: auto !important;
+	height: 60px;
+	min-height: 60px;
+}
+
+#dropdown {
+	margin-left: 10px;
+	text-align: left;
+}
+
+.dropdownHead {
+	color: #546DB5;
+	border-bottom: 1px solid #C6CEE6;
+	text-align: left;
+	cursor: pointer;
+	font-weight: bold;
+	margin-bottom: 20px;
+	padding-left: 20px;
+	background-image: url(../images/ddright.gif);
+	background-repeat: no-repeat;
+}
+
+.dropdownBody {
+	display: none;
+	padding-left: 10px;
+}
+
+.title {
+	padding-left: 8px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #546D7D;
+	height: 24px;
+	line-height: 28px;
+	border-top: 1px solid #D9E7F0;
+	border-left: 1px solid #C6D9EC;
+	border-right: 1px solid #8DB9D4;
+	border-bottom: 1px solid #69889B;
+	background-color: #C4DAE9;
+}
+
+.stitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #546DB5;
+	border-bottom: 1px solid #C6CEE6;
+}
+
+.scontent {
+	border-left: 1px solid #C6D9EC;
+	border-right: 1px solid #C6D9EC;
+	border-bottom: 1px solid #C6D9EC;
+	background-color: #FAFAFA;
+	padding: 5px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	/* 以下三行是利用!important修改樣式優先權來讓IE 6和其他瀏覽器看起來效果相同
+	 * 因為IE 6看不懂!important和min-height
+	 * 這裡IE 6只看懂height:200px;而非IE 6的瀏覽器會忽略height:200px;
+	*/
+	height: auto !important;
+	height: 200px;
+	min-height: 200px;
+}
+
+#footer {
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+	width: 920px;
+	height: 180px;
+	font-family: Ubuntu, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	text-align: center;
+	background-image: url(../images/bgfooter.png);
+}
+
+
+
+

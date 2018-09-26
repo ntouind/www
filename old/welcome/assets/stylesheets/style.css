@@ -1,0 +1,109 @@
+/* Fonts
+ * {{{ */
+/* font-family: 'Press Start 2P', cursive; */
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+/* /=Fonts }}} */
+
+/* Structure
+ * {{{ */
+html {
+	margin: 0;
+	padding: 0;
+	color: #000000;
+	font: normal 22px 'Press Start 2P', cursive;
+}
+
+body {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	background-image: url(../images/bg.jpg);
+	background-attachment: fixed;
+}
+
+header {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-top: 5px solid #000;
+	z-index: 1;
+}
+
+section {
+	width: 900px;
+	margin: 0 auto 50px;
+	padding: 0;
+}
+
+footer {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	z-index: 1;
+}
+
+canvas {
+	margin: 0;
+	padding: 0;
+}
+
+/* /=Structure }}} */
+
+/* Header
+ * {{{ */
+header h1 {
+	margin: 0 0 0.5em;
+	padding-top: 0.5em;
+	font-size: 52px;
+	text-align: center;
+}
+/* /=Header }}} */
+
+/* Section
+ * {{{ */
+#canvas {
+	padding: 10px 20px;
+	background-color: #000;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+	-ms-border-radius: 15px;
+}
+
+#canvas_controller img {
+	width: 64px;
+	height: 64px;
+	margin-top: 10px;
+	padding: 0 10px;
+	background-color: #fff;
+}
+
+/* /=Section }}} */
+
+/* Footer
+ * {{{ */
+#twitter {
+	text-align: center;
+}
+
+#copyright p {
+	margin-bottom: 20px;
+	font: normal 14px Georgia, serif;
+	text-align: center;
+}
+
+#copyright a,
+#copyright a:hover,
+#copyright a:active,
+#copyright a:visited {
+	color: #000;
+	text-decoration: none;
+}
+/* /=Footer }}} */
+
+/* vim:set fdm=marker: */
+
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"><!-- 林博仁：因為 JQuery .load() 疑似不支援主體為 XHTML 的關係所以請不要換成 XHTML  -->
+		<meta name="google-site-verification" content="sZdbkph1J8a2TT0nwZUxQvOJR-UnsXfta68BlWUjRp4">
+		<title>
+			國立臺灣海洋大學網路發展協會
+		</title>
+		<link href="styles/layout.css" rel="stylesheet" type="text/css">
+		<link href="index.css" rel="stylesheet" type="text/css">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+		</script>
+		<script type="text/javascript" src="scripts/konami.js">
+		</script>
+		<script type="text/javascript">
+		        //<![CDATA[
+		             var konami = new Konami("http://new.ind.ntou.edu.tw/welcome/");
+		        //]]>
+		</script>
+		<style type='text/css'>
+		        /*<![CDATA[*/
+		        body {
+		          background-color: #F4F4FF;
+		        }
+		        #img-w3c-html5-logo {
+		          width:133px;
+		          height:64px
+		        }
+		        #contact-us-emphasis {
+		          color: yellow
+		        }
+		        /*]]>*/
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<div id="headinfo">
+					<a href="/">首頁</a> | <a href="#" onclick="$('#content').load('pages/contact.xhtml #page_content');"><span id="contact-us-emphasis">聯絡我們</span></a>
+				</div>
+			</div>
+			<div id="main">
+				<div id="menu">
+					<ul>
+						<li class="category">
+							<strong>關於網路發展協會</strong>
+						</li>
+						<li id="about">
+							<a href="#" onclick="$('#content').load('pages/about.xhtml #page_content');">社團簡介</a>
+						</li>
+						<li id="activity">
+							<a href="#" onclick="$('#content').load('pages/activity.xhtml #page_content');">活動資訊</a>
+						</li>
+						<li id="organization">
+							<a href="#" onclick="$('#content').load('pages/organization.xhtml #page_content');">組織章程</a>
+						</li>
+						<li id="member">
+							<a href="#" onclick="$('#content').load('pages/member.xhtml #page_content');">歷屆幹部群</a>
+						</li>
+						<li id="document">
+							<a href="#" onclick="$('#content').load('pages/document.xhtml #page_content');">文件資料</a>
+						</li>
+					</ul>
+				</div>
+				<div id="content">
+					<img alt="網路發展協會的標誌" id="ind_logo" src="images/INDmark3_new.png" width="330" height="330">
+					<div id="ann">
+						<div class="title">
+							<img src="images/item_systemmsg.gif" alt="system">公告
+						</div>
+						<div class="icontent">
+							目前沒有資訊
+						</div>
+					</div>
+				</div>
+				<div id="footer">
+					海洋大學網路發展協會 © 2016 保留部份權利，如有額外授權需求請<a href='mailto:ntouind@gmail.com'>來信</a>洽詢<br>
+					<address>
+						台灣 20224 基隆市中正區北寧路 2 號<br>
+						位於<a href='http://li.ntou.edu.tw' target='_blank'>國立台灣海洋大學圖書暨資訊處</a>（<a href='http://www.oga.ntou.edu.tw/%e9%a3%9f%e8%a1%a3%e4%bd%8f%e8%a1%8c/%e6%a0%a1%e5%8d%80%e5%b9%b3%e9%9d%a2%e5%9c%96/' target='_blank'>機械二館</a>四樓）
+					</address><br>
+					<a href="https://www.w3.org/html/logo/"><img alt="「本網頁在設計時即戮力遵從開放的 HTML 標記語言第五版與 CSS 樣式表第三版規範」標誌" title="本網頁在設計時即戮力遵從開放的 HTML 標記語言第五版與 CSS 樣式表第三版規範" src="https://www.w3.org/html/logo/badge/html5-badge-h-css3.png" id="img-w3c-html5-logo"></a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+.table-staff-list {
+	border-collapse: collapse;
+	width: 360px;
+	padding-left: auto;
+	padding-right: auto;
+}
+
+.table-staff-list td, .table-staff-list th {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #CCCCCC;
+}
+
+.table-staff-list th {
+	background-color: #EAEAFF;
+}
+
+.table-staff-list .col-staff-list-category {
+	width: 40%;
+}
+
+.table-staff-list .col-staff-list-names {
+	/* width: 100% - .table-staff-list #col-staff-list-category->width; */
+	;
+}
+
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Thanks for kaneshin, I clone from https://github.com/kaneshin/nyancat-javascript -->
+	<!-- 
+    service support by : NTOU IND (http://ind.ntou.edu.tw)
+    secret : SWYgeW91IHNlZSB0aGlzIHNvdXJjZSwgeW91IGFyZSB3ZWxjb21lZCB0byBJTkQu
+    page was modified by : Orin Chen
+    -->
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			歡迎加入網路發展協會
+		</title>
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<link rel="stylesheet" href="assets/stylesheets/style.css">
+		<script src='assets/javascripts/nyancat.js'>
+		</script>
+	</head>
+	<body>
+		<header>
+			<div id="header_title">
+				<h1>
+					歡迎加入海洋大學網路發展協會!
+				</h1><!-- 半形驚嘆號是有意放的，由 WebFont 提供字形 -->
+			</div>
+		</header>
+		<section>
+			<div id="canvas">
+				<canvas id="nyancat" width="860" height="400">
+					你需要使用支援 HTML5 的瀏覽器以檢視此 Canvas 內容。
+				</canvas><audio controls="controls" autoplay="autoplay" style="display:none;" loop="loop"><source src="assets/sounds/original.ogg"> <source src="assets/sounds/original.mp3" type="audio/mpeg"> IE6 必須死！！！！！！<br>
+				請改用 <a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a>, <a href="http://www.google.com/chrome/">Google Chrome</a> 等較先進的 Web 瀏覽器。</audio>
+			</div>
+		</section>
+		<footer>
+			<div id="twitter">
+				<script>
+				        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+				</script>
+			</div>
+			<div id="copyright">
+				<p>
+					如果您有興趣(?)請來信 <a href="mailto:ntouind@gmail.com">ntouind@gmail.com</a>
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>

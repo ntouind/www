@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>
+			IND網路教學CGI的簡介和應用
+		</title>
+		<meta name="GENERATOR" content="Internet Assistant for Microsoft Word 2.0z">
+	</head>
+	<body bgcolor="white">
+		<center>
+			<h1>
+				IND網路教學CGI的簡介和應用
+			</h1>
+		</center>
+		<hr>
+		一、共通閘道介面CGI是什麼？
+		<p>
+			共通閘道介面是一個資訊伺服主機對外資訊服務的標準介面（如HTTPd及CERN Servers），如下圖。簡單<br>
+			地說就是一個閘道介面在一般超文件與伺服主機上的應用程式的中間。
+		</p>
+		<center>
+			<img alt="" src="cgi.jpg" width="687" height="213">
+		</center>
+		<p>
+			二、何謂CGI程式語言？
+		</p>
+		<p>
+			事實上，任何一個程式語言可以在伺服主機上，利用CGI介面來執行的應用服務，皆可稱之為「CGI程式<br>
+			語言」。若伺服主機是用NCSA HTTPd server服務器版本的話，通常CGI程式語言會存於叫cgi-bin的目錄裡。<br>
+		</p>
+		<p>
+			三、CGI程式是如何從伺服主機上得到相關資訊？
+		</p>
+		<p>
+			CGI程式處理客端的資訊因操作系統平台的不同（如：Unix及MS-Windows），而會有所差異。在Unix系統上<br>
+			CGI程式是利用格式標籤FORM上的Method="post"來取得一個以標準輸入stdin的字元字串，這字元字串可以<br>
+			有不止一個用戶輸入值，每一個輸入值會以「＆」符號來隔開。而在MS-Windows操作視窗平台上，會透過<br>
+			檔案介面（file-based interface）來完成。<br>
+		</p>
+		<p>
+			四、CGI程式如何送回相關資訊給瀏覽器？
+		</p>
+		<p>
+			CGI程式傳回相關訊息也因操作平台的不同，而也有所不一樣。在Unix系統上，會以一個標準輸出stdout送回<br>
+			相關訊息給資訊伺服主機，然後由資訊伺服主機顯示資訊至用戶的瀏覽器上。而在MS-Windows操作平台上，<br>
+			是以檔案輸出、輸入方式來達成資訊傳遞的效果。<br>
+		</p>
+		<p>
+			五、目前最受歡迎的CGI程式語言是那些？
+		</p>
+		<p>
+			目前最受歡迎的CGI程式語言有四；C、Shell、Perl和Visual Basic語言。但其它程式語言<br>
+			（如：Fortran、TCL及AppleScript）也是大有人在使用。<br>
+		</p>
+		<p>
+			六、為什麼無法執行CGI程式？
+		</p>
+		<p>
+			無法執行CGI程式的原因有好幾種，也可以因不同HTTPd伺服器不同，而有所差異。以下，列出常見之錯誤<br>
+			情況以供讀者參考：
+		</p>
+		<ul>
+			<li>把程式放入非CGI目錄裏？
+			</li>
+		</ul>
+		<p>
+			在UNIX HTTPd伺服器上，使用者只能把其CGI程式放在其系統規定下的/cgi-bin目錄裡，而非使用者自己本身<br>
+			的HTML目錄裡。因為只有在/cgi-bin目錄上，才有外部呼叫執行外部指令的功能。此外，有些系統管理員只<br>
+			設定少數用戶（例：superuser或root），才能使用/cgi-bin目錄，所以讀者請在編寫CGI程式之前，先行確認是<br>
+			否有資格去使用/cgi-bin目錄，否則白白浪費時間是很划不來的。<b><font color="red">在IND這部機器上，則因透過了一個程式<br>
+			〝cgiwrap〞，若想加入cgi的程式，只須在自己的根目錄中的www目錄裡，建個cgi-bin的目錄，並把cgi<br>
+			的程式放入其中，再以<i>http://ind.ntou.edu.tw/cgi-bin/cgiwrap/~username/cgi-files</i>來呼叫cgi的程式即可使用。</font></b>
+		</p>
+		<ul>
+			<li>忘記更改程式屬性了（chmod 755）？
+			</li>
+		</ul>
+		<p>
+			這個問題常常發生在Unix系統上，通常使用者在編寫程式時，設定為只能自己執行的程式屬性。所以只要使<br>
+			用者利用chmod 755去更改其屬性為每個人都可以使用的屬性即可。<br>
+		</p>
+		<p>
+			七、CGI的應用
+		</p>
+		<p>
+			範例：
+		</p>
+		<p>
+			A、原始程式的取得
+		</p>
+		<p>
+			原始程式的取得guestmsg.tgz和count.tgz（<a href="http://ind.ntou.edu.tw/~dada/cgi-bin/pro/guestmsg.tgz">guestmsg.tgz</a>）並在 Server主機上用<br>
+			tar zxvf filename把檔案解開。
+		</p>
+		<p>
+			<a name="guestbook" id="guestbook">B、留言版的製作：</a>
+		</p>
+		<p>
+			此範例是一個來賓留言板，其目的要顯示使用者的資料在瀏覽器上，而輸入的HTML文件內容如下：
+		</p>
+		<p>
+			1、（在html部份）
+		</p>
+		<table summary="" border="1">
+			<tr>
+				<td width="697">
+					來賓留言板的HTML文件內容：
+				</td>
+			</tr>
+			<tr>
+				<td width="697">
+					&lt;title&gt;來賓留言板&lt;/title&gt;
+					<p>
+						&lt;form method="post" action="http://ind.ntou.edu.tw/cgi-bin/cgiwrap/~refined/guestmsg.cgi"&gt;
+					</p>
+					<p>
+						&lt;p&gt;您的大名：&lt;input name="name" size="20"&gt;
+					</p>
+					<p>
+						&lt;p&gt;您的E-Mail:&lt;input name="email" size="30"&gt;
+					</p>
+					<p>
+						&lt;p&gt;你的網址：&lt;input name="homepage" size="40"&gt;
+					</p>
+					<p>
+						&lt;p&gt;您的意見或資料：&lt;textarea name="suggest" cols=30 rows=4&gt;&lt;/textarea&gt;&lt;p&gt;
+					</p>
+					<p>
+						&lt;input type=submit" value="寄出"&gt; &lt;input type="reset" value="取消"&gt;
+					</p>
+					<p>
+						&lt;/form&gt;
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="697">
+					來賓留言板在瀏覽器顯示情形：
+				</td>
+			</tr>
+			<tr>
+				<td width="697" bgcolor="white">
+					<center>
+						<img alt="" src="img00015.gif" width="452" height="336">
+					</center>
+				</td>
+			</tr>
+		</table>
+		<ol>
+			<li>在原始程式部份
+			</li>
+		</ol>
+		<p>
+			須注意的是在原始程式中的24行及40行
+		</p>
+		<p>
+			<font color="red">24行 fp = fopen（"/home/class_night/n8215064/www/guestbook.htm","a"）; /*開留言檔*/</font>
+		</p>
+		<p>
+			把創造出來的檔案<font color="red">guestbook.htm</font>必須寫出完整的路徑，如：帳號是 <font color="red">tracy</font>，若想知道完整的路徑，可以在www<br>
+			目錄中鍵入<font color="red">〝pwd〞</font>的指令，即可得知完整的路徑，如下例：
+		</p>
+		<p>
+			<font color="blue">ind:~\www&gt;</font> <font color="red">pwd</font>
+		</p>
+		<p>
+			<font color="blue">/home/class_night/n8317201/www/</font>
+		</p>
+		<p>
+			之後再把原始檔案改為fp = fopen（"<i><b><font color="red">/home/class_night/n8317201/www/guestbook.htm</font></b></i>","a"）也就是自己的路<br>
+			徑即可。則來訪者，所留下的name、e-mail、url、suggest即會被加入到www目錄下的guestbook.htm檔案中。
+		</p>
+		<p>
+			<font color="red">40行printf("&lt;a href=\"/~refined/guestbook.htm\"&gt;看看留言版&lt;/a&gt;"); /* 更改留言版的入徑 */</font>
+		</p>
+		<p>
+			把/~refined/guestbook.htm改為自己帳號的入徑，如：帳號是 <font color="red">tracy</font>，則改為<i><b><font color="red">/~tracy/guestbook.htm</font></b></i>。
+		</p>
+		<p>
+			再來就要compiler程式，看看有沒有錯誤。因本程式是用C語言所寫成，則可以gcc來compiler，便會創造出一<br>
+			個guestmsg.cgi的檔，再把此檔copy到www/cgi-bin的目錄下，若沒有此目錄可用mkdir創造出來，並更改此檔的<br>
+			權限為755、即chmod 755 guestmsg.cgi（改為給其他人為可讀可執行）。如此即完成了留言版的製作。
+		</p>
+		<p>
+			<font color="blue">ind:~&gt;</font><font color="red">mkdir www/cgi-bin/</font>
+		</p>
+		<p>
+			<font color="blue">ind:~&gt;</font><font color="red">gcc -o guestmsg.cgi guestmsg.c</font>
+		</p>
+		<p>
+			<font color="blue">ind:~&gt;</font><font color="red">mv guestmsg.cgi www/cgi-bin/</font>
+		</p>
+		<p>
+			<font color="blue">ind:~&gt;</font><font color="red">chmod 755 www/cgi-bin/guestmsg.cgi<br></font>
+		</p>
+		<p>
+			<font color="blue">ind:~&gt;</font><font color="red">mv addguest.htm www</font>
+		</p>
+		<p>
+			<a name="counter" id="counter">C、計數器的製作</a>
+		</p>
+		<ol>
+			<li>修改原始程式檔中記錄檔的絕對路徑、其中有兩行要修改。
+			</li>
+		</ol>
+		<p>
+			fp = fopen（<font color="red">"/home/class_night/n8215064/www/cgi-bin/count.dat","r"</font>）;
+		</p>
+		<p>
+			out = fopen（<font color="red">"/home/class_night/n8215064/www/cgi-bin/count.dat","w"</font>）;
+		</p>
+		<p>
+			若不知自己帳號的絕對路徑，如上可執行pwd來得知。
+		</p>
+		<p>
+			程式修改後、我們再以gcc把它編訪成可執行檔，並把它搬到www/cgi-bin/的目錄中。
+		</p>
+		<p>
+			<font color="blue">ind:~&gt;</font> <font color="red">gcc -o count.cgi count.c</font>
+		</p>
+		<p>
+			<font color="blue">ind:~&gt;</font> <font color="red">mv count.cgi www/cgi-bin/</font>
+		</p>
+		<p>
+			<font color="blue">ind:~&gt;</font><font color="red">chmod 755 www/cgi-bin/count.cgi</font>
+		</p>
+		<p>
+			再來創造個count.dat的記錄檔，因記錄檔是要給使用者可讀、可執行、可寫入，故須把屬性設為777。如以<br>
+			下方式：
+		</p>
+		<p>
+			<font color="blue">ind:~&gt;</font> <font color="red">cd www/cgi-bin/</font>
+		</p>
+		<p>
+			<font color="blue">ind:~ www/cgi-bin&gt;</font> <font color="red">echo "0" &gt; count.dat</font>
+		</p>
+		<p>
+			<font color="blue">ind:~ www/cgi-bin&gt;</font> <font color="red">chmod 777 count.dat<br></font>
+		</p>
+		<p>
+			D、在html部份，如何呼叫CGI？？
+		</p>
+		<p>
+			以&lt;img src=<font color="blue">"http://ind.ntou.edu.tw/cgi-bin/cgiwrap/~<font color="red">username</font>/<font color="red">cgi-files</font>"</font>&gt;來執行cgi的程式。
+		</p>
+		<hr>
+		<font color="purple">若有問題請 mail 給 <a href="mailto:root@ind.ntou.edu.tw">root@ind.ntou.edu.tw</a></font>
+	</body>
+</html>

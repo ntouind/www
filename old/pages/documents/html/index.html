@@ -1,0 +1,620 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>
+			網路發展學會HTML寫作入門講義
+		</title>
+	</head>
+	<body bgcolor="white">
+		<center>
+			<h1>
+				網路發展學會HTML寫作入門講義
+			</h1>
+		</center>
+		<hr>
+		<pre>
+<font size="+1"><b>前     言：</b></font>
+
+　　你可知道什麼是HTML嗎?HTML的全名是Hypertext Markup Language 其中文意思
+是"超文件檔案標記語言"，既然是一種語言，當然要先知道要用什麼工具來撰寫了，
+然而HTML之撰寫卻有很多的工具可用，舉凡記事本 ; HTMLABC，HOTDOG輔助編譯軟體 ; 
+WORD轉譯軟體 ; FRONTPAGE直書軟體等。諸多撰寫軟體可視使用者本身之喜好選擇，
+不過建議初學者不論用何種撰寫軟體書寫程式，最好先學會HTML之基本語法，方便日後
+修改等諸多好處。
+
+<font size="+1"><b>一、架構解說：</b></font>
+
+    每一個最小的HTML文件必需包含一個抬頭。而文件若要被當作HTML3.0，建議加一
+段前言宣告。如下列第一行：
+
+&lt;!DOCTYPE HTML PUBLIC"-//IETF//DTD HTML 3.0//EN"&gt;
+</pre>
+		<pre>
+
+&lt;HTML&gt;....................................................................
+                                                                               .
+&lt;HEAD&gt;.............................                                      .
+                    .  這是HTML文件的起頭符號，可讓讀      .
+&lt;TITLE&gt;我是文件標題&lt;/TITLE&gt; .-&gt;文件的讀者了解此為程式的開頭。      .
+                                        .                                      .
+&lt;/HEAD&gt;............................                                      .基
+                                                                               .本
+&lt;BODY&gt;.............................                                      .架
+                                        .  這主體BODY元素的意思是指在文件      .構
+.........內容（請參考內容語法）         .-&gt;中的所有文字的開端，其包含所有文    .
+                                        .  件的標題層文字，段落及表例等等。    .
+&lt;/BODY&gt;............................                                      .
+                                                                               .
+&lt;/HTML&gt;...................................................................
+</pre>
+		<pre>
+<font size="+1"><b>二、內容語法：</b></font>
+
+a、標題層文字字型：
+   語法：&lt;Hn&gt;...&lt;/Hn&gt;，n=1~6
+   說明：從H1到H6有六個不同字型大小的設定，而這六個基本標題層的文字字型定義
+         如下：
+</pre>
+		<center>
+			<table summary='' border="1">
+				<tr>
+					<th>
+						H1
+					</th>
+					<td>
+						粗體、最大字型，靠中、上下會有一行或二行空白行。
+					</td>
+				</tr>
+				<tr>
+					<th>
+						H2
+					</th>
+					<td>
+						粗體，大字型，偏左，上下會有一行或二行空白行。
+					</td>
+				</tr>
+				<tr>
+					<th>
+						H3
+					</th>
+					<td>
+						粗體，大字型，有點向左邊縮排，上下會有一行或二行空白行。
+					</td>
+				</tr>
+				<tr>
+					<th>
+						H4
+					</th>
+					<td>
+						粗體，正常字型，向左邊縮排，上下會有一行空白行。
+					</td>
+				</tr>
+				<tr>
+					<th>
+						H5
+					</th>
+					<td>
+						粗體，較小字型，向左邊縮排，上面會有一行空白行。
+					</td>
+				</tr>
+				<tr>
+					<th>
+						H6
+					</th>
+					<td>
+						粗體，更小字型，向左邊縮排，上面會有一行空白行。
+					</td>
+				</tr>
+			</table>
+		</center>
+		<pre>
+   <a href="demoa.htm">範例</a>：&lt;H1&gt;我是H1標題&lt;H1&gt;
+   可以用&lt;BaseFont Size=3&gt;來設定字型的「參考大小」，如Size=3相當於&lt;H4&gt;
+   字型，然後再用&lt;Font Size=+3&gt;...&lt;/Font&gt;來調整大小?
+   <a href="demoa1.htm">範例</a>
+
+b、段落符號：
+   語法：&lt;P&gt;（此可以不在文字敘述後再加個&lt;/P&gt;）
+   說明：這個P指的是到下一行段落，也就會在行與行之間有一行空行。
+   <a href="demob.htm">範例</a>：&lt;P&gt;我正在換段
+
+c、強制換行：
+   語法：&lt;BR&gt;（此可以不在文字敘述後再加個&lt;/BR&gt;）
+   說明：換行也就是中斷文件內容換至下一行，若無此符號，即使用換行鍵「Enter」
+         至下一行，在一般瀏覽器中仍不被視在換行，除非是用&lt;PRE&gt;（底下介紹）
+         預先格式。?
+   <a href="democ.htm">範例</a>：我正在換行&lt;BR&gt;
+
+d、預先格式：
+   語法：&lt;PRE&gt;...&lt;/PRE&gt;
+   說明：PRE的語法是代表著一組文字已經被格式化過，即在&lt;PRE&gt;...&lt;/PRE&gt;之間的文
+         字會以原先格式中的形式來顯示出來。
+   <a href="demod.htm">範例</a>：&lt;PRE&gt;
+            我跟下一行不同
+               我跟上一行不一樣
+         &lt;/PRE&gt;
+
+e、水平線標示符號：
+   語法：&lt;HR&gt;
+   說明：水平線標示是被用來隔開文件中不同段落之文字或圖。
+   <a href="demoe.htm">範例</a>：&lt;HR&gt;
+
+f、有順序編號的表例：
+   語法：&lt;OL&gt;
+         &lt;LI&gt;有順序文字一
+         &lt;LI&gt;有順序文字二
+         &lt;/OL&gt;
+   說明：有順序編號的表列是指有數字為表例順序，這表例以&lt;OL&gt;為開端，再以&lt;LI&gt;
+         為表列順序為數字符號，再以&lt;/OL&gt;為結束表列的順序。
+   <a href="demof.htm">範例</a>：
+   你也可以用&lt;OL type=A 或 a 或 I 或 i 或 1 &gt;來指定「順序」的編碼方式
+</pre>
+		<center>
+			<table summary='' border="1">
+				<tr>
+					<th>
+						TYPE=A
+					</th>
+					<td>
+						英文大寫。也就是A,B,C,...
+					</td>
+				</tr>
+				<tr>
+					<th>
+						TYPE=a
+					</th>
+					<td>
+						英文小寫。也就是a,b,c,...
+					</td>
+				</tr>
+				<tr>
+					<th>
+						TYPE=I
+					</th>
+					<td>
+						大寫羅馬字。也就是,I,II,III...
+					</td>
+				</tr>
+				<tr>
+					<th>
+						TYPE=i
+					</th>
+					<td>
+						英文大寫。也就是i,ii,iii,...
+					</td>
+				</tr>
+				<tr>
+					<th>
+						TYPE=1
+					</th>
+					<td>
+						英文大寫。也就是1,2,3,...
+					</td>
+				</tr>
+			</table>
+		</center>
+		<pre>
+你也可以用 START 來指定起始編號。
+另外您也可以直接在&lt;/LI&gt;標記中用Type屬性來指定「順序」編碼方式，
+並且用Value來指定它的起始值。
+   <a href="demof1.htm">範例</a>：
+
+
+g、無順序編號的表列：
+   語法：&lt;UL&gt;
+         &lt;LI&gt;無順序編路文字一
+         &lt;LI&gt;無順序編路文字二
+         &lt;/UL&gt;
+   說明：無順序編號的表列是指用非數字為表列順序，這表列以&lt;UL&gt;為開端而非以
+         &lt;OL&gt;，再以&lt;LI&gt;為表列順序符號，再以&lt;/UL&gt;為結束表列的順序。
+   <a href="demog.htm">範例</a>
+   你可以用&lt;UL Type=??&gt;來指定項目符號的外觀。
+   <a href="demog1.htm">範例</a>
+
+
+h、印刷字體的標示符號：
+   語法：&lt;B&gt;...&lt;/B&gt;或&lt;strong&gt;...&lt;/strong&gt;<b>粗體</b>
+         &lt;I&gt;...&lt;/I&gt;或&lt;em&gt;...&lt;/em&gt;&lt;或cite&gt;...&lt;/cite&gt;<i>斜體</i>
+         &lt;U&gt;...&lt;/U&gt;<u>加底線</u>
+         &lt;TT&gt;...&lt;/TT&gt;<tt>打字體（較寬的字體）</tt>
+     　　&lt;Big&gt;...&lt;/Big&gt;<big>加大</big>
+　　     &lt;Small&gt;...&lt;/Small&gt;<small>變小</small>
+     　　&lt;Sup&gt;...&lt;/Sup&gt;<sup>上標</sup>
+     　　&lt;Sub&gt;...&lt;/Sub&gt;<sub>下標</sub>
+     　　&lt;center&gt;...&lt;/center&gt;置中
+     　　&lt;!--...--&gt;註解
+         &lt;blockquote&gt;...&lt;/blockquote&gt;向右縮排5個空白字元
+         &amp;nbsp;空白字元
+   <a href="demoh.htm">範例</a>：
+
+i、向中對齊：
+   語法：&lt;CENTER&gt;...&lt;/CENTER&gt;
+   說明：即文字圖形……等均向中對齊。
+   <a href="demoi.htm">範例</a>：&lt;CENTER&gt;我在中間&lt;/CENTER&gt;
+   
+k、超連結
+   語法：&lt;A HREF="URL檔案名"&gt;*&lt;/A&gt;
+   說明：以&lt;A為起始標籤，空一格後，加入HREF=所要連結的文件地址（如："URL檔
+         名"），然後以大於&gt;符號作為結束。在大於符號後，可以填寫這來源連結文
+         件名稱或內容。最後以&lt;/A&gt;做為這來源標示語法的結尾。
+   範例：&lt;A HREF="http://ind.ntou.edu.tw/"&gt;IND網路發展學會&lt;/A&gt;
+         &lt;A HREF="mailto:www@ind.ntou.edu.tw"&gt;有意見請來信&lt;/A&gt;
+   &lt;A HREF="ftp://ftp.ntou.edu.tw"&gt;海大FTP站&lt;/A&gt;
+   備註：所謂URL是Uniform Resource Locator的縮寫，在中文裡暫且將它翻譯為共同
+         性資源定址器.。
+ps. link="#RRGGBB" 可改變超文字的顏色，預設值為藍色。
+     alink(active link)屬性用來指定「鏈結中」的顏色。
+     vlink(visited link)屬性用來指定「鏈結後」的顏色。
+
+l、秀圖標示符號
+   語法：&lt;IMG SRC="檔案名" ALIGN=top/middle/bottom/left/right&gt;
+   說明：秀圖標示符號IMG是為超文件中顯示合乎瀏覽器的圖形（例如：GIF或JPG圖形
+         檔），而秀圖標示符號的用法是：
+   &lt;IMG SRC="檔案名" ALIGN=top/middle/bottom/left/right&gt;
+         SRC  圖形來源指定，其屬性同於URL
+         ALIGN  指定圖文顯示的位置。
+                        top 圖示說明文字與圖形上方對齊。
+      middle  圖示說明文字與圖形中間對齊。
+      bottom  圖示說明文字與圖形下方對齊。
+      left  圖示靠左。
+      right 圖非靠右。
+   <a href="demol.htm">範例</a>：&lt;IMG SRC="test.gif" ALIGN=middle&gt;
+   ps.&lt;IMG SRC="test.gif" ALIGN=middle&amp;gt Alt="酒井法子";其 Alt 屬性提供不看圖者的提示。
+       幾個&lt;IMG &gt;的屬性:
+        Border=???       設定圖的邊框厚度。
+        Vspace=???       圖的垂直方向預留空白寬度。
+        Hspace=???       圖的水平方向預留空白寬度。
+        LowSRC="???.gif"先載入這張低解析度的圖片，完畢後，再載入由SRC="???.gif"的圖片。
+        如果在HTML文件中，用&lt;A name="one Name&gt;&lt;/A&gt;宣告一個參考點，那麼
+        &lt;A HREF="#one Name"&gt;獅子&lt;/A&gt;就可以讓『獅子」這一超文字直接跳到同一篇
+        HTML文件中叫做「one Name」之參考點。也可指定別的HTML文件。
+        &lt;/A HREF="other.html#oneName"&gt;虎鼻獅&lt;/A&gt;
+        &lt;/A HREF="http://140.121.134.37/other.html#oneName&gt;&lt;虎鼻獅&gt;
+        
+m、加入背景顏色及圖形
+   語法：&lt;BODY BGCOLOR="#？？？？？？"&gt;（加入背景顏色）
+         &lt;BODY BACKGROUND="圖形檔"&gt;
+   其設定通式為:&lt;BODY bgcolor="RRGGBB"&gt;
+   或&lt;BODY bgcolor=RRGGBB&gt;
+   RR是以一個Byte來表示紅色的深淺 ( 十六進制的00~FF)
+   GG是以一個Byte來表示紅色的深淺 ( 十六進制的00~FF)
+   BB是以一個Byte來表示紅色的深淺 ( 十六進制的00~FF)
+   <a href="demom11.htm">範例</a>
+
+   說明：一般預設的背景顏色，看來是那麼的單調，若想改背景顏色可以在BODY（文
+         件主體）之後加入參數，如〝BGCOLOR=〞及〝BACKGROUND=〞來增填背景的
+         色彩及圖樣。
+   <a href="demom.htm">範例</a>：&lt;BODY BGCOLOR="#FFFFFF"&gt;或&lt;BODY BACKGROUND="test1.gif"&gt;
+   備註：在加入顏色控制碼中，其中#為加入顏色數值的開始，而前兩碼數值代表紅色
+         ，中間兩碼代表綠色，而後兩碼則代表藍色，均以16進位換算即0~F。若知道
+         此顏色的英文名稱，可以直接在引號中加入，
+         例如：&lt;BODY BGCOLOR="white"&gt;則背景設定為白色。
+
+PS.&lt;BODY text="RRGGBB"&gt;可改變 text 的屬性
+   <a href="demom.htm">範例</a>
+
+n、表格
+語法：&lt;Talbe&gt;...&lt;/Talbe&gt;
+      Table 的 Border屬性可以指定「格子」的粗細。而每一個格子的內容用        
+       &lt;TD&gt;...&lt;/TD&gt;來界定。TD是Table Data的縮寫。
+       &lt;TR&gt;是用來將資料項移到下一列。
+       Align屬性用來調節它的水平對齊方向。
+       VAlign屬性用來調節它的垂直對齊方向。
+<a href="demon.htm">範例</a>：
+       如果想要讓一個資料項佔用數個水平方格，可用ColSpan(跨行)。
+       如果想要讓一個資料項佔用數個垂直方格，可用RowSpan(跨列)。
+       我們可以用 Caption標記在 Table 上加上標題，它會自動對齊 Table 中間。
+        &lt;TH&gt;標記可以讓我們把 Table 中的某些項目當成「標頭」。          
+<a href="demon1.htm">範例</a>：
+       cellspaceing 屬性用來指定 Talbe 資料項間的間距，它也會影響 &lt;Caption&gt;
+        標題與 Table 之間的距離。
+       cellpadding 屬性用來指定資料項內部的「資料」與「資料項邊緣」的距離。
+       width、height用來設定 Table 的大小，也可以用width=90%表示寬度會佔整個
+       視窗的百分之九十。也可以用來設定 TD 某一資料項的大小。
+        &lt;TD bgcolor="?????"&gt;可用來指定每格的顏色。
+<a href="demon2.htm">範例</a>：
+
+o、Frame(分割視窗)
+<a href="demoo.htm">範例</a>：
+FrameSet Cols 除了用「百分比」之外，也可用點數表示。如:
+&lt;FrameSet Clos="50,*"&gt;表示第一個視窗為50點。
+&lt;FrameSet Clos="*,50"&gt;表示第二個視窗為50點。
+&lt;FrameSet Clos="50,50"&gt;表示二個視窗各佔一半。
+<a href="demoo1.htm">範例</a>：
+Frame 的六個屬性:
+SRC 指定HTML文件，也可以是URL格式。如:&lt;Frame SRC="http://www.hinet.net/&gt;
+MarginWidth設定分割視窗的顯示區與左邊邊界的距離。
+如:&lt;Frame SRC="A.htm MarginWidth=0&gt;
+MarginHeight設定分割視窗的顯示區與頂端邊界的距離。
+如:&lt;Frame SRC="A.htm MarginHeight=10&gt;
+Scrolling設定分割視窗要不要有捲軸。可設定為yes，no，或auto。
+如:&lt;Frame SRC="A.htm Scrolling="auto"&gt;
+NoResize 讓分割視窗不能調整大小。
+如:&lt;Frame SRC="A.htm NoResize=0&gt;
+Name 替「分割視窗」取一名字，並用 Target 指定顯示視窗。
+<a href="demoo2.htm">範例</a>：
+
+p、動態Web Page:
+<a href="comic.htm">範例</a>：
+
+
+r、FORM(表單)
+語法：&lt;FORM&gt;...&lt;/FORM&gt;
+      FORM具有二個屬性:
+ACTION:設定表單連結到那一個URL，若沒指明，表示連到自己。
+METHOD:表示表單內容是利用何種管道傳送給CGI程式。有POST和GET二種，內定值為GET。
+例如:&lt;FORM METHOD="POST" ACTION="/cgi-bin/CGI_script"&gt;
+...........
+&lt;/FORM&gt;
+
+      TEXTAREA:它標示一個多行文字編輯區域，允許使用輸入資料。其屬性有:
+</pre>
+		<table summary='' border="1">
+			<tr>
+				<th>
+					NAME
+				</th>
+				<td>
+					這個文字區域的名字。
+				</td>
+			</tr>
+			<tr>
+				<th>
+					ROWS
+				</th>
+				<td>
+					這個文字區域顯示的行數。
+				</td>
+			</tr>
+			<tr>
+				<th>
+					COLS
+				</th>
+				<td>
+					這個文字區域顯示的寬度，單位為字元數。
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<a href="Demor1.htm">範例</a>:&lt;TEXTAREA NAME="comment" ROWS=4 COLS=50&gt; THIS IS THE SAMPLE TEXT &lt;/TEXTAREA&gt;
+				</td>
+			</tr>
+		</table>
+		<pre>
+
+
+SELECT:產生一個下拉式或捲軸式選單，其屬性有:
+</pre>
+		<table summary='' border="1">
+			<tr>
+				<th>
+					NAME
+				</th>
+				<td>
+					這個選單輸入的名字。
+				</td>
+			</tr>
+			<tr>
+				<th>
+					SIZE
+				</th>
+				<td>
+					選單呈現在螢幕上的大小，預設值為1，如果設成2以上，則變成捲軸式選單。
+				</td>
+			</tr>
+			<tr>
+				<th>
+					MULTIPLE
+				</th>
+				<td>
+					多重選擇，如果用此屬性，不管SIZE為何，一律以捲軸式選單呈現。
+				</td>
+			</tr>
+		</table>
+		<pre>
+&lt;SELECT&gt;與&lt;/SELECT&gt;中間可以有許多選項，每一項皆以&lt;OPTION&gt;標示代表，
+OPTION屬性有:
+</pre>
+		<table summary='' border="1">
+			<tr>
+				<th>
+					VALUE
+				</th>
+				<td>
+					如果選擇這選項，則這選項的傳回值和使用者在瀏覽器所見相同
+				</td>
+			</tr>
+			<tr>
+				<th>
+					SELECTED
+				</th>
+				<td>
+					這使此選項定為預設值。
+				</td>
+			</tr>
+		</table>
+		<pre>
+INPUT:
+這標示包含多種輸入方法，包括文字(TEXT)，密碼(PASSWORD)，勾選式清單(CHECKBOX)、
+單選式清單(RADIO)、清除(RESET)按鈕、送出(SUBMIT)按鈕，以及上傳檔案(FILE)。
+這些輸入方法以TYPE屬性來區別。
+</pre>
+		<table summary='' border="1">
+			<caption>
+				文字(TEXT)有關的屬性
+			</caption>
+			<tr>
+				<th>
+					NAME
+				</th>
+				<td>
+					輸入欄位的名字。
+				</td>
+			</tr>
+			<tr>
+				<th>
+					SIZE
+				</th>
+				<td>
+					輸入欄位的大小。
+				</td>
+			</tr>
+			<tr>
+				<th>
+					MAXLENGTH
+				</th>
+				<td>
+					最多容許輸入幾個字元。
+				</td>
+			</tr>
+			<tr>
+				<th>
+					VALUE
+				</th>
+				<td>
+					預設值
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					例如:輸入姓名:&lt;INPUT TYPE="text" NAME="name" SIZE=20&gt;
+				</td>
+			</tr>
+		</table>
+		<pre>
+<br></pre>
+		<table summary='' border="1">
+			<caption>
+				密碼(PASSWORD)有關的屬性
+			</caption>
+			<tr>
+				<th>
+					NAME
+				</th>
+				<td>
+					輸入欄位的名字。
+				</td>
+			</tr>
+			<tr>
+				<th>
+					SIZE
+				</th>
+				<td>
+					輸入欄位的大小。
+				</td>
+			</tr>
+			<tr>
+				<th>
+					MAXLENGTH
+				</th>
+				<td>
+					最多容許輸入幾個字元。
+				</td>
+			</tr>
+			<tr>
+				<th>
+					VALUE
+				</th>
+				<td>
+					預設值
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					例如:輸入密碼:&lt;INPUT TYPE="password" NAME="passwd" MAXLENGTH=20&gt;
+				</td>
+			</tr>
+		</table>
+		<pre>
+<br></pre>
+		<table summary='' border="1">
+			<caption>
+				勾選式清單(CHECKBOX)有關的屬性
+			</caption>
+			<tr>
+				<th>
+					NAME
+				</th>
+				<td>
+					欄位名字。
+				</td>
+			</tr>
+			<tr>
+				<th>
+					VALUE
+				</th>
+				<td>
+					當此項目被勾選時，所傳回的值。
+				</td>
+			</tr>
+			<tr>
+				<th>
+					CHECKED
+				</th>
+				<td>
+					將這欄位預設為被勾選。
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					例如::&lt;INPUT TYPE="checkbox" NAME="check1" VALUE="html"&gt;是否學過HTML?
+				</td>
+			</tr>
+		</table>
+		<pre>
+<br><br></pre>
+		<table summary='' border="1">
+			<caption>
+				單選式清單(RADIO)有關的屬性
+			</caption>
+			<tr>
+				<th>
+					NAME
+				</th>
+				<td>
+					欄位名字。
+				</td>
+			</tr>
+			<tr>
+				<th>
+					VALUE
+				</th>
+				<td>
+					當此項目被勾選時，所傳回的值。
+				</td>
+			</tr>
+			<tr>
+				<th>
+					CHECKED
+				</th>
+				<td>
+					將這欄位預設為被勾選。
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					例如::&lt;INPUT TYPE="radio" NAME="sex" VALUE="male"&gt;男
+				</td>
+			</tr>
+		</table>
+		<pre>
+
+<a href="demor.htm">範例</a>：
+
+</pre><font size="+1"><b>三、 如何在IND上秀出自己的HOMEPAGE</b></font> a、利用telnet連上自己的帳號，並在自己的帳號下建立一個www子目錄。 例如：ind~&gt;mkdir www（輸入mkdir www再按enter即可建立一個www子目錄） b、利用ftp程式把做好的HTML檔（如：＊.html或＊.htm檔）及圖形檔（如： ＊.gif或＊.jpg檔）送到www這個目錄裡。注意：主頁一定要welcome.htm或 index.htm，而welcome.html及index.html也可以。 c、再利用WWW瀏覽器（如：NETSCAPE或INTERNET EXPLORER）輸入自己的網址， 就可以看見自己的作品了。例如：http://ind.ntou.edu.tw/~sun。 若有問題請來信<a href="mailto:orho@ind.ntou.edu.tw">orho@ind.ntou.edu.tw</a> 參考書籍：
+		<ul>
+			<li>輕輕鬆鬆自修學HTML
+			</li>
+			<li>HOME PAGE設計
+			</li>
+			<li>WWW之HTML與CGI寫作大全
+			</li>
+			<li>WWW入門、架站與系統維護
+			</li>
+		</ul><br>
+		<br>
+		本講義原作者:蔡永熙
+	</body>
+</html>

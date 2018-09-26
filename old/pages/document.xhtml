@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>
+			文件資料
+		</title>
+		<base href=".." />
+		<link href="styles/layout.css" rel="stylesheet" type="text/css" />
+		<script
+			  src="https://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id="page_content">
+		<p>
+		目前此頁無法正常運作，請移駕<a href="pages/document.xhtml" target="_blank">這裡</a>觀看。
+		</p>
+		<div class="title">
+			<img alt="項目" src="images/item02.gif" />文件資料
+		</div>
+		<div class="scontent">
+			<div id="dropdown">
+				<div class="dropdownHead">
+					IND 研討會講義
+				</div>
+				<p>
+					<a href="pages/documents/html/">Homepage的製作</a><br />
+					<a href="pages/documents/cgi/">CGI的簡介與應用</a><br />
+					<a href="http://ind.ntou.edu.tw/~dada/cgi/">CGI與Perl</a>
+				</p>　　　　　　　　　
+				<div class="dropdownHead">
+					全校教學
+				</div>
+				<p class="dropdownBody">
+					<a href="http://ind.ntou.edu.tw/pages/documents/flash5_Learn.pkg.rar">flash5全校教學包.rar</a><br />
+					<a href="http://ind.ntou.edu.tw/pages/documents/flash5_Learn.pkg.zip">flash5全校教學包.zip</a><br />
+					<a href="http://ind.ntou.edu.tw/pages/documents/Internet%20Fundamental%20Concept.ppt">Internet Fundamental Concept.ppt</a>
+				</p>
+				<div class="dropdownHead">
+					SERVER 安裝參考網頁
+				</div>
+				<p class="dropdownBody">
+					<a href="http://www.freebsd.org/">FreeBSD.org</a><br />
+					<a href="http://www.linux.org/">Linux.org</a><br />
+					<a href="http://www.xfree86.org/">XFree86.org</a><br />
+					<a href="http://www.isc.org/">ISC.org(DNS-BIND / NEWS-INN)</a><br />
+					<a href="http://www.sendmail.org/">Sendmail.org</a><br />
+					<a href="http://www.wu-ftpd.org/">wu-ftpd.org</a><br />
+					<a href="http://www.apache.org/">Apache.org</a><br />
+					<a href="http://www.squid.org/">Squid.org(Proxy)</a><br />
+					<a href="http://www.perl.org/">Perl.org</a><br />
+					<a href="http://www.twbbs.org/">twbbs.org"</a><br />
+					<a href="http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html">MRTG (Net Analysis)</a><br />
+				</p>
+				<div class="dropdownHead">
+					英文資料部份
+				</div>
+				<p class="dropdownBody">
+					<a href="https://dev.mysql.com/doc/">MySQL Documentation</a><br />
+					<a href="http://php.net/manual">PHP Manual</a><br />
+					<a href="http://perldoc.perl.org">Perl programming documentation</a><br />
+					<a href="https://httpd.apache.org/docs/">Apache HTTP Server Documentation</a>
+				</p>
+				<div class="dropdownHead">
+					中文相關文件
+				</div>
+				<p class="dropdownBody">
+					<a href="http://ind.ntou.edu.tw/pages/documents/first.html">設定 locale 要件&lt;請先讀&gt;</a><br />
+					<a href="http://ind.ntou.edu.tw/pages/documents/cpine.html">Chinese Pine</a><br />
+					<a href="http://ind.ntou.edu.tw/pages/documents/ytalk.html">Chinese YTalk</a><br />
+					<a href="http://ind.ntou.edu.tw/pages/documents/telnet.html">Telnet 中文問題</a><br />
+					<a href="http://ind.ntou.edu.tw/pages/documents/decmail.html">DEC Sendmail 收中文信</a><br />
+					<a href="http://ind.ntou.edu.tw/pages/documents/upload.html">上傳網頁至IND</a>
+				</p>
+				<div class="dropdownHead">
+					應用軟體部份
+				</div>
+				<p class="dropdownBody">
+					<a href="http://ind.ntou.edu.tw/pages/documents/gcc.html">GNU C Compiler</a><br />
+					<a href="http://ind.ntou.edu.tw/pages/documents/elm.html">ELM - Mail Reader</a><br />
+					<a href="http://ind.ntou.edu.tw/pages/documents/sendmail.html">Sendmail 8.8.3 - Mail Daemon</a><br />
+					<a href="http://ind.ntou.edu.tw/pages/documents/joe.html">JOE - Nice Editor</a><br />
+					<a href="http://ind.ntou.edu.tw/pages/documents/gopher.html">Gopher Client</a>
+				</p>
+				<div class="dropdownHead">
+					See also
+				</div>
+				<p class="dropdownBody">
+					<a href="gopher://axp1.csie.ncu.edu.tw/">axp1.csie.ncu.edu.tw</a>
+				</p>
+			</div>
+		</div>
+			<script type="text/javascript">
+			       //<![CDATA[
+			               $("#dropdown div.dropdownHead").click(function(){
+			                 $(this).css("background-image","url(images/dddown.gif)").next().slideToggle("fast").siblings("p:visible").slideUp("fast");
+			                 $(this).siblings("div.dropdownHead").css("background-image","url(images/ddright.gif)");
+			               });
+			       //]]>
+			</script>
+		</div>
+	</body>
+</html>
