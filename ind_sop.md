@@ -1,7 +1,7 @@
 IND營運SOP
 =====
 
-資源列表：請參考IND首頁 <http://ntouind.tw>
+資源列表：請參考IND首頁 <https://ntouind.tw>
 
 ## 幹部權責
 
