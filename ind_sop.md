@@ -1,7 +1,7 @@
 IND營運SOP
 =====
 
-資源列表：請參考IND首頁 <http://ntouind.tw>
+資源列表：請參考IND首頁 <https://ntouind.tw>
 
 ## 幹部權責
 
@@ -79,7 +79,7 @@ IND營運SOP
 當收到FB訊息或有人來詢問時：
 
 * 閒聊問一下，他的專長，以及對什麼方面有興趣
-* 請他填新生加入表單 http://ntouind.tw
+* 請他填新生加入表單 https://ntouind.tw
 * 請他對粉絲團按讚，關注FB粉絲團的定期活動
 * 鼓勵他來參加每一個活動，點擊參加即可。
 * 請對方加入Telegram群組 https://t.me/joinchat/A0isxRDS_IZnfSabF-shug
