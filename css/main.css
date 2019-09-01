@@ -1,0 +1,9 @@
+a[target="_blank"]:after {
+  content: url(https://i.imgur.com/8aIfS3N.png);
+  margin: 0 3px 0 5px;
+}
+
+.external {
+  color: inherit;
+  text-decoration: underline;
+}
