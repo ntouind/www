@@ -8,4 +8,3 @@ jobs:
     runs-on: [self-hosted, linux]
     steps:
       - uses: actions/checkout@v2
-      - run: ln -s $BASE_DIR/IND
