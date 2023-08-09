@@ -1,0 +1,11 @@
+name: Deploy Website
+on: [push]
+env:
+  BASE_DIR: /var/www
+jobs:
+  deploy:
+    name: Git pull
+    runs-on: [self-hosted, linux]
+    steps:
+      - uses: actions/checkout@v2
+      - run: ln -s $BASE_DIR/IND
