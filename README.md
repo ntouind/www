@@ -2,7 +2,7 @@
 
 ![](img/INDmark1-2.jpg)
 
-Hi, 這裡是IND，一個玩各種資訊技術的好地方。不管是AI、IoT、Hacking、Web Fullstock各種方面都很歡迎。我們有許多有趣的設備、裝置、教程，定時舉辦的讀書會，以及全台灣最豐沛的網路資源。
+Hi, 這裡是IND，一個玩各種資訊技術的好地方。不管是AI、IoT、Hacking、Web Fullstack各種方面都很歡迎。我們有許多有趣的設備、裝置、教程，定時舉辦的讀書會，以及全台灣最豐沛的網路資源。
 
 我們歡迎各種網路宅人加入，但請不要唸作網路阿宅部「Internet Nerd Department」。先來 -> [FB粉絲團](https://www.facebook.com/ind.ntou/) <- 按個讚吧，很期待你出現在我們的活動中 :)
 
